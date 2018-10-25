@@ -1,0 +1,10 @@
+<body>
+{% if titles %}
+	{% for title in titles %}
+  <p>{{ title }}</p>
+{% endfor %}
+	{% else %}
+	<p>No titles!</p>
+	{% endif %}
+
+</body>
