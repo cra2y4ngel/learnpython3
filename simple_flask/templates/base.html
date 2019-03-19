@@ -1,0 +1,20 @@
+<html><head>
+<!-- Bootstrap core CSS -->
+<link href="{{ url_for('static', filename="bootstrap-3.3.7-dist/css/bootstrap.min.css") }}" rel="stylesheet">
+</head>
+<body>
+<script src="{{ url_for('static', filename="bootstrap-3.3.7-dist/js/bootstrap.min.js") }}"></script>
+<body>
+    <div> 
+        {% block header %}
+            <p><a href = 'index'>Home</a> </p>
+        {% endblock %}
+    </div>
+    <div>{% block content %}111111111{% endblock %}</div>
+    <div id="footer">
+        {% block footer %}
+        &copy; Copyright 2017 by <a href="http://www.shiyanlou.com/">shiyalou</a>.
+        {% endblock %}
+    </div>
+</body>
+</html>

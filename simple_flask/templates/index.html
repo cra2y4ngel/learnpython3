@@ -1,0 +1,16 @@
+<html>
+<head>
+	{% extends "base.html" %}
+</head>
+<body>
+{% block content %}
+{% if dict %}
+{% for key,value in dict.items() %}
+  <p><a href=/file/{{ key }}>{{ value }}</a> tags: {% for tag in  dict_tag[value] %} {{tag}} {% endfor %}</p>
+{% endfor %}
+	{% else %}
+	<p>No titles!</p>
+	{% endif %}
+{% endblock %}
+</body>
+</html>

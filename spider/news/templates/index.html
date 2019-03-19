@@ -1,0 +1,9 @@
+<body>
+{% if dict %}
+{% for key,value in dict.items() %}
+  <p><a href=/file/{{ key }}>{{ value }}</a></p>
+{% endfor %}
+	{% else %}
+	<p>No titles!</p>
+	{% endif %}
+</body>

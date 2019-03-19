@@ -1,16 +1,7 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8" />
-<title>Index</title>
-<link rel="stylesheet" href = "{{ url_for('static',filename='main.css')}}">
-</head>
-
-<body>
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block body %}
   {% for course in courses %}
-  <p>{{ course.name }} - {{ course.author.username }}</p>
+  <h1>{{ course.name }} - {{ course.author.username }}</h1>
   {% endfor %}
-  </body>
-  <script src = "{{ url_for('static',filename = 'main.js') }}"></script>
-  </html>
-
+{% endblock %}
